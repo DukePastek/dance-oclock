@@ -1,39 +1,36 @@
 <form class="actu-form" (ngSubmit)="submit()">
   <h1>{{ isEditMode() ? "Modifier l'actu" : 'Nouvelle actu' }}</h1>
 
-  <label>
-    Titre
-    <input type="text" name="title" [(ngModel)]="model.title" required />
-  </label>
+  <mat-form-field appearance="outline">
+    <mat-label>Titre</mat-label>
+    <input matInput type="text" name="title" [(ngModel)]="model.title" required />
+  </mat-form-field>
 
-  <label>
-    Résumé
-    <textarea name="summary" rows="2" [(ngModel)]="model.summary" required></textarea>
-  </label>
+  <mat-form-field appearance="outline">
+    <mat-label>Résumé</mat-label>
+    <textarea matInput name="summary" rows="2" [(ngModel)]="model.summary" required></textarea>
+  </mat-form-field>
 
-  <label>
-    Contenu
-    <textarea name="content" rows="8" [(ngModel)]="model.content" required></textarea>
-  </label>
+  <mat-form-field appearance="outline">
+    <mat-label>Contenu</mat-label>
+    <textarea matInput name="content" rows="8" [(ngModel)]="model.content" required></textarea>
+  </mat-form-field>
 
-  <label>
-    Type
-    <select name="type" [(ngModel)]="model.type">
+  <mat-form-field appearance="outline">
+    <mat-label>Type</mat-label>
+    <mat-select name="type" [(ngModel)]="model.type">
       @for (type of actuTypes; track type) {
-        <option [value]="type">{{ type }}</option>
+        <mat-option [value]="type">{{ type }}</mat-option>
       }
-    </select>
-  </label>
+    </mat-select>
+  </mat-form-field>
 
-  <label>
-    URL image
-    <input type="text" name="imageUrl" [(ngModel)]="model.imageUrl" />
-  </label>
+  <mat-form-field appearance="outline">
+    <mat-label>URL image</mat-label>
+    <input matInput type="text" name="imageUrl" [(ngModel)]="model.imageUrl" />
+  </mat-form-field>
 
-  <label class="checkbox">
-    <input type="checkbox" name="isPublished" [(ngModel)]="model.isPublished" />
-    Publié
-  </label>
+  <mat-checkbox name="isPublished" [(ngModel)]="model.isPublished">Publié</mat-checkbox>
 
-  <button type="submit">Enregistrer</button>
+  <button mat-flat-button color="primary" type="submit">Enregistrer</button>
 </form>

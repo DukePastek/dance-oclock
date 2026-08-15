@@ -1,10 +1,15 @@
-<header class="admin-header">
+<mat-toolbar class="admin-header">
   <span class="brand">Dance O'Clock — Admin</span>
+  <span class="spacer"></span>
   <nav>
     <a routerLink="/admin/actus">Actus</a>
-    <button type="button" (click)="logout()">Déconnexion</button>
+    <app-theme-toggle />
+    <button mat-stroked-button type="button" (click)="logout()">
+      <mat-icon>logout</mat-icon>
+      Déconnexion
+    </button>
   </nav>
-</header>
+</mat-toolbar>
 
 <main class="admin-main">
   <router-outlet />

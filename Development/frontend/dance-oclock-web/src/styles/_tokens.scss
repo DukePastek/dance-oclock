@@ -1,0 +1,33 @@
+// Single source of truth for Dance O'Clock's brand colors.
+// Change a value here to re-theme the whole app (Material + custom CSS).
+// The Material M3 palettes derived from these seeds live in `_theme-colors.scss`
+// (generated via `ng generate @angular/material:m3-theme`) — if you change the
+// values below, regenerate that file with the same primary/tertiary/neutral seeds.
+
+$gold: #c9a227;
+$gold-light: #e7c26a;
+$gold-dark: #8a6d1d;
+$black: #121212;
+$white: #ffffff;
+$danger: #ba1a1a;
+$border-light: #e2e2e2;
+$border-dark: #3a3a3a;
+
+$breakpoint-mobile: 599px;
+$breakpoint-tablet: 959px;
+
+// Exposed as CSS custom properties so component stylesheets can consume them
+// without needing to `@use` this Sass partial directly.
+:root {
+  --color-gold: #{$gold};
+  --color-gold-light: #{$gold-light};
+  --color-gold-dark: #{$gold-dark};
+  --color-black: #{$black};
+  --color-white: #{$white};
+  --color-danger: #{$danger};
+  --color-border: #{$border-light};
+}
+
+html[data-theme='dark'] {
+  --color-border: #{$border-dark};
+}

@@ -1,19 +1,19 @@
 <form class="login-form" (ngSubmit)="submit()">
   <h1>Connexion admin</h1>
 
-  <label>
-    Email
-    <input type="email" name="email" [(ngModel)]="email" required />
-  </label>
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" name="email" [(ngModel)]="email" required />
+  </mat-form-field>
 
-  <label>
-    Mot de passe
-    <input type="password" name="password" [(ngModel)]="password" required />
-  </label>
+  <mat-form-field appearance="outline">
+    <mat-label>Mot de passe</mat-label>
+    <input matInput type="password" name="password" [(ngModel)]="password" required />
+  </mat-form-field>
 
   @if (errorMessage(); as error) {
     <p class="error">{{ error }}</p>
   }
 
-  <button type="submit">Se connecter</button>
+  <button mat-flat-button color="primary" type="submit">Se connecter</button>
 </form>

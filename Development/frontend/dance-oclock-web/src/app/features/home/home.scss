@@ -8,16 +8,17 @@
   }
 
   p {
-    color: #666;
+    opacity: 0.7;
     margin-bottom: 2rem;
   }
+}
 
-  .cta {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background: #ff5c8a;
-    color: #fff;
-    border-radius: 4px;
-    text-decoration: none;
+@media (max-width: 599px) {
+  .hero {
+    padding: 3rem 1rem;
+
+    h1 {
+      font-size: 2rem;
+    }
   }
 }

@@ -1,28 +1,35 @@
 .admin-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  background: #1a1a2e;
-  color: #fff;
+  background: var(--color-black) !important;
+  color: var(--color-white) !important;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+  height: auto;
+  min-height: 64px;
+
+  .spacer {
+    flex: 1 1 auto;
+  }
 
   nav {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 0.5rem 0;
 
     a {
-      color: #e0e0e0;
+      color: var(--color-white);
       text-decoration: none;
+
+      &.active,
+      &:hover {
+        color: var(--color-gold);
+      }
     }
 
     button {
-      background: none;
-      border: 1px solid #e0e0e0;
-      color: #e0e0e0;
-      padding: 0.4rem 0.8rem;
-      border-radius: 4px;
-      cursor: pointer;
+      color: var(--color-white);
+      border-color: var(--color-white);
     }
   }
 }
@@ -31,4 +38,10 @@
   padding: 2rem;
   max-width: 900px;
   margin: 0 auto;
+}
+
+@media (max-width: 599px) {
+  .admin-main {
+    padding: 1rem;
+  }
 }

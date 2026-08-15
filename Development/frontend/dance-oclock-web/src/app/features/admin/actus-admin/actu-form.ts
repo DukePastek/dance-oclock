@@ -1,12 +1,24 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatButton } from '@angular/material/button';
 import { ActuService } from '../../../core/services/actu.service';
 import { ActuType, ActuUpsert } from '../../../core/models/actu.model';
 
 @Component({
   selector: 'app-actu-form',
-  imports: [FormsModule],
+  imports: [
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatCheckboxModule,
+    MatButton
+  ],
   templateUrl: './actu-form.html',
   styleUrl: './actu-form.scss'
 })

@@ -1,24 +1,51 @@
-<header class="site-header">
-  <a class="brand" routerLink="/">Dance O'Clock</a>
-  <nav>
-    <a routerLink="/actu" routerLinkActive="active">Actu</a>
-    <a routerLink="/bachata" routerLinkActive="active">C'est quoi la bachata</a>
-    <a routerLink="/qui-sommes-nous" routerLinkActive="active">Qui sommes-nous</a>
-    <a routerLink="/nos-cours" routerLinkActive="active">Nos cours</a>
-    <a routerLink="/galerie" routerLinkActive="active">Galerie</a>
-  </nav>
-</header>
+<mat-sidenav-container class="shell">
+  <mat-sidenav #drawer mode="over" [fixedInViewport]="true" class="drawer">
+    <mat-nav-list>
+      @for (link of navLinks; track link.path) {
+        <a
+          mat-list-item
+          [routerLink]="link.path"
+          routerLinkActive="active"
+          (click)="drawer.close()"
+          >{{ link.label }}</a
+        >
+      }
+    </mat-nav-list>
+  </mat-sidenav>
 
-<main>
-  <router-outlet />
-</main>
+  <mat-sidenav-content>
+    <mat-toolbar class="site-header">
+      <a class="brand" routerLink="/">Dance O'Clock</a>
 
-<footer class="site-footer">
-  <div class="socials">
-    <a href="#" target="_blank" rel="noopener">Facebook</a>
-    <a href="#" target="_blank" rel="noopener">Instagram</a>
-    <a href="#" target="_blank" rel="noopener">Newsletter</a>
-  </div>
-  <a class="google-review" href="#" target="_blank" rel="noopener">Donne-nous une note sur Google ⭐</a>
-  <p>&copy; {{ currentYear }} Dance O'Clock</p>
-</footer>
+      @if (isMobile()) {
+        <span class="spacer"></span>
+        <app-theme-toggle />
+        <button mat-icon-button type="button" aria-label="Ouvrir le menu" (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      } @else {
+        <nav>
+          @for (link of navLinks; track link.path) {
+            <a [routerLink]="link.path" routerLinkActive="active">{{ link.label }}</a>
+          }
+        </nav>
+        <span class="spacer"></span>
+        <app-theme-toggle />
+      }
+    </mat-toolbar>
+
+    <main>
+      <router-outlet />
+    </main>
+
+    <footer class="site-footer">
+      <div class="socials">
+        <a href="#" target="_blank" rel="noopener">Facebook</a>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">Newsletter</a>
+      </div>
+      <a class="google-review" href="#" target="_blank" rel="noopener">Donne-nous une note sur Google ⭐</a>
+      <p>&copy; {{ currentYear }} Dance O'Clock</p>
+    </footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>
