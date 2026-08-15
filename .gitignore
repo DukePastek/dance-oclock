@@ -1,0 +1,25 @@
+# .NET
+Development/backend/**/bin/
+Development/backend/**/obj/
+Development/backend/**/*.user
+Development/backend/**/appsettings.Development.json
+Development/backend/**/appsettings.Local.json
+Development/backend/.vs/
+*.suo
+
+# Angular / Node
+Development/frontend/**/node_modules/
+Development/frontend/**/dist/
+Development/frontend/**/.angular/
+npm-debug.log*
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
