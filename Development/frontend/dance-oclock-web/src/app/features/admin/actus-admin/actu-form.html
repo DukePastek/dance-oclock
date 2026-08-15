@@ -1,0 +1,39 @@
+<form class="actu-form" (ngSubmit)="submit()">
+  <h1>{{ isEditMode() ? "Modifier l'actu" : 'Nouvelle actu' }}</h1>
+
+  <label>
+    Titre
+    <input type="text" name="title" [(ngModel)]="model.title" required />
+  </label>
+
+  <label>
+    Résumé
+    <textarea name="summary" rows="2" [(ngModel)]="model.summary" required></textarea>
+  </label>
+
+  <label>
+    Contenu
+    <textarea name="content" rows="8" [(ngModel)]="model.content" required></textarea>
+  </label>
+
+  <label>
+    Type
+    <select name="type" [(ngModel)]="model.type">
+      @for (type of actuTypes; track type) {
+        <option [value]="type">{{ type }}</option>
+      }
+    </select>
+  </label>
+
+  <label>
+    URL image
+    <input type="text" name="imageUrl" [(ngModel)]="model.imageUrl" />
+  </label>
+
+  <label class="checkbox">
+    <input type="checkbox" name="isPublished" [(ngModel)]="model.isPublished" />
+    Publié
+  </label>
+
+  <button type="submit">Enregistrer</button>
+</form>

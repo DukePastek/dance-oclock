@@ -1,0 +1,41 @@
+.actu-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.actu-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+
+  a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    padding: 1rem;
+  }
+
+  img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    margin: -1rem -1rem 1rem -1rem;
+    width: calc(100% + 2rem);
+  }
+
+  .type {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #ff5c8a;
+  }
+}
+
+.rss-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}

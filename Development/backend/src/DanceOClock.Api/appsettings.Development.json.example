@@ -1,0 +1,12 @@
+{
+  "ConnectionStrings": {
+    "Default": "Host=aws-0-eu-west-3.pooler.supabase.com;Port=5432;Database=postgres;Username=postgres.xxxxxxxxxxxx;Password=YOUR_SUPABASE_DB_PASSWORD;SSL Mode=Require;Trust Server Certificate=true"
+  },
+  "Jwt": {
+    "SigningKey": "REPLACE_WITH_A_LONG_RANDOM_SECRET_AT_LEAST_32_CHARS"
+  },
+  "AdminAccounts": [
+    { "Email": "kean@danceoclock.fr", "Password": "ChangeMe123!", "DisplayName": "Kean Derr" },
+    { "Email": "laura@danceoclock.fr", "Password": "ChangeMe123!", "DisplayName": "Laura" }
+  ]
+}

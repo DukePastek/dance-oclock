@@ -1,0 +1,22 @@
+services:
+  api:
+    build:
+      context: ./backend
+      dockerfile: src/DanceOClock.Api/Dockerfile
+    ports:
+      - "5000:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__Default: ${SUPABASE_DB_CONNECTION_STRING}
+      Jwt__Issuer: DanceOClock.Api
+      Jwt__Audience: DanceOClock.Web
+      Jwt__SigningKey: ${JWT_SIGNING_KEY}
+      Cors__AllowedOrigins__0: http://localhost:4200
+
+  web:
+    build:
+      context: ./frontend/dance-oclock-web
+    ports:
+      - "4200:80"
+    depends_on:
+      - api

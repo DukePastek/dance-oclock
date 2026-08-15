@@ -1,0 +1,30 @@
+<div class="admin-toolbar">
+  <h1>Actus</h1>
+  <a routerLink="/admin/actus/nouvelle" class="btn">+ Nouvelle actu</a>
+</div>
+
+<table class="admin-table">
+  <thead>
+    <tr>
+      <th>Titre</th>
+      <th>Type</th>
+      <th>Publié</th>
+      <th>Date</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (actu of actus(); track actu.id) {
+      <tr>
+        <td>{{ actu.title }}</td>
+        <td>{{ actu.type }}</td>
+        <td>{{ actu.isPublished ? 'Oui' : 'Non' }}</td>
+        <td>{{ actu.publishedAt | date: 'dd/MM/yyyy' }}</td>
+        <td class="actions">
+          <a [routerLink]="['/admin/actus', actu.id]">Modifier</a>
+          <button type="button" (click)="remove(actu)">Supprimer</button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

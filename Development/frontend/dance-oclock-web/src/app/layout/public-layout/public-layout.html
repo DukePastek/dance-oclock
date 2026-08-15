@@ -1,0 +1,24 @@
+<header class="site-header">
+  <a class="brand" routerLink="/">Dance O'Clock</a>
+  <nav>
+    <a routerLink="/actu" routerLinkActive="active">Actu</a>
+    <a routerLink="/bachata" routerLinkActive="active">C'est quoi la bachata</a>
+    <a routerLink="/qui-sommes-nous" routerLinkActive="active">Qui sommes-nous</a>
+    <a routerLink="/nos-cours" routerLinkActive="active">Nos cours</a>
+    <a routerLink="/galerie" routerLinkActive="active">Galerie</a>
+  </nav>
+</header>
+
+<main>
+  <router-outlet />
+</main>
+
+<footer class="site-footer">
+  <div class="socials">
+    <a href="#" target="_blank" rel="noopener">Facebook</a>
+    <a href="#" target="_blank" rel="noopener">Instagram</a>
+    <a href="#" target="_blank" rel="noopener">Newsletter</a>
+  </div>
+  <a class="google-review" href="#" target="_blank" rel="noopener">Donne-nous une note sur Google ⭐</a>
+  <p>&copy; {{ currentYear }} Dance O'Clock</p>
+</footer>

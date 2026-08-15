@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6B98F250-369F-47B8-8EED-6829190168F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DanceOClock.Api", "src\DanceOClock.Api\DanceOClock.Api.csproj", "{FF4F2484-9B8E-450B-974C-57D8EDA1D994}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DanceOClock.Data", "src\DanceOClock.Data\DanceOClock.Data.csproj", "{3ADE43D7-CE4F-49D2-89B9-EBDA5526B0E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF4F2484-9B8E-450B-974C-57D8EDA1D994}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF4F2484-9B8E-450B-974C-57D8EDA1D994}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF4F2484-9B8E-450B-974C-57D8EDA1D994}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF4F2484-9B8E-450B-974C-57D8EDA1D994}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ADE43D7-CE4F-49D2-89B9-EBDA5526B0E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ADE43D7-CE4F-49D2-89B9-EBDA5526B0E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ADE43D7-CE4F-49D2-89B9-EBDA5526B0E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ADE43D7-CE4F-49D2-89B9-EBDA5526B0E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FF4F2484-9B8E-450B-974C-57D8EDA1D994} = {6B98F250-369F-47B8-8EED-6829190168F1}
+		{3ADE43D7-CE4F-49D2-89B9-EBDA5526B0E2} = {6B98F250-369F-47B8-8EED-6829190168F1}
+	EndGlobalSection
+EndGlobal

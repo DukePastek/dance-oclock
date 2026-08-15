@@ -1,0 +1,6 @@
+@DanceOClock.Api_HostAddress = http://localhost:5125
+
+GET {{DanceOClock.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

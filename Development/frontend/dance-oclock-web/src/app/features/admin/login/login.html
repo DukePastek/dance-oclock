@@ -1,0 +1,19 @@
+<form class="login-form" (ngSubmit)="submit()">
+  <h1>Connexion admin</h1>
+
+  <label>
+    Email
+    <input type="email" name="email" [(ngModel)]="email" required />
+  </label>
+
+  <label>
+    Mot de passe
+    <input type="password" name="password" [(ngModel)]="password" required />
+  </label>
+
+  @if (errorMessage(); as error) {
+    <p class="error">{{ error }}</p>
+  }
+
+  <button type="submit">Se connecter</button>
+</form>

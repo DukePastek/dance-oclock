@@ -1,0 +1,23 @@
+<section class="page">
+  <h1>Actu, codes promo et bons plans</h1>
+  <a class="rss-link" href="/api/rss/actus" target="_blank" rel="noopener">Flux RSS</a>
+
+  @if (actus().length === 0) {
+    <p>Aucune actu publiée pour le moment.</p>
+  }
+
+  <ul class="actu-grid">
+    @for (actu of actus(); track actu.id) {
+      <li class="actu-card">
+        <a [routerLink]="['/actu', actu.id]">
+          @if (actu.imageUrl) {
+            <img [src]="actu.imageUrl" [alt]="actu.title" />
+          }
+          <span class="type">{{ actu.type }}</span>
+          <h2>{{ actu.title }}</h2>
+          <p>{{ actu.summary }}</p>
+        </a>
+      </li>
+    }
+  </ul>
+</section>

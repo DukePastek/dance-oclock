@@ -1,0 +1,10 @@
+@if (actu(); as a) {
+  <article class="page actu-detail">
+    @if (a.imageUrl) {
+      <img [src]="a.imageUrl" [alt]="a.title" />
+    }
+    <span class="type">{{ a.type }}</span>
+    <h1>{{ a.title }}</h1>
+    <p class="content">{{ a.content }}</p>
+  </article>
+}
