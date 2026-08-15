@@ -1,0 +1,28 @@
+.intro {
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+.styles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.style-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &__accent {
+    height: 6px;
+    background: linear-gradient(90deg, var(--color-gold-light), var(--color-gold-dark));
+  }
+}
+
+@media (max-width: 599px) {
+  .styles-grid {
+    grid-template-columns: 1fr;
+  }
+}
