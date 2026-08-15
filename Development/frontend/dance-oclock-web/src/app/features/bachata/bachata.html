@@ -1,4 +1,35 @@
-<section class="page">
+<section class="page bachata-page">
   <h1>C'est quoi la bachata ?</h1>
-  <p>Contenu à venir : histoire de la bachata, bachata moderne, traditionnelle, sensual, nouveaux styles.</p>
+  <p class="intro">
+    La bachata est une danse de couple née en République Dominicaine, dansée sur une musique à 4 temps. Portée par
+    des mélodies romantiques et un jeu de hanches caractéristique, elle s'est imposée comme l'une des danses latines
+    les plus populaires dans le monde, tout en donnant naissance à de nombreux styles.
+  </p>
+
+  <h2>Histoire de la bachata</h2>
+  <p>
+    Apparue dans les années 1960 dans les quartiers populaires de République Dominicaine, la bachata était à
+    l'origine une musique de guitare jouée lors de fêtes de voisinage, avant de devenir une danse de couple à part
+    entière. Longtemps considérée comme une musique "de la rue", elle a peu à peu gagné en reconnaissance pour
+    devenir, à partir des années 2000, un phénomène international dansé dans le monde entier.
+  </p>
+  <p>
+    Cette diffusion mondiale a favorisé l'émergence de nouveaux styles, mélangeant la tradition dominicaine à des
+    influences venues d'autres danses de couple.
+  </p>
+
+  <h2>Les styles de bachata</h2>
+  <div class="styles-grid">
+    @for (style of styles; track style.name) {
+      <mat-card class="style-card" appearance="outlined">
+        <div class="style-card__accent"></div>
+        <mat-card-header>
+          <mat-card-title>{{ style.name }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ style.description }}</p>
+        </mat-card-content>
+      </mat-card>
+    }
+  </div>
 </section>
